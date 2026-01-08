@@ -1,80 +1,146 @@
-Sales & Customer Analytics Data Warehouse (SQL)
-📖 Project Overview
+# 📊 Sales & Customer Analytics Data Warehouse (SQL)
 
-This project focuses on building an analytics-ready data warehouse to support sales and customer analysis. Data from multiple operational systems (CRM and ERP) is consolidated into a centralized warehouse designed for reliable reporting and business insights.
+## 📖 Project Overview
+This project focuses on building an **analytics-ready data warehouse** to support **sales and customer analytics**.  
+Data from multiple operational systems (CRM and ERP) is consolidated into a centralized warehouse designed for **reliable reporting and business insights**.
 
-The solution enables analysis of sales performance, customer behavior, product trends, and regional contributions through structured data modeling and SQL-based analytics. The final output is a scalable analytics layer that can be directly consumed by dashboards and ad-hoc SQL queries for data-driven decision-making.
+The solution enables analysis of **sales performance, customer behavior, product trends, and regional contributions** through structured data modeling and SQL-based analytics.  
+The final output is a **scalable analytics layer** that can be directly consumed by dashboards and ad-hoc SQL queries for **data-driven decision-making**.
 
-🎯 Business Goals & Analytics Objectives
+---
 
-Build a centralized, analytics-ready data warehouse to support business decision-making
-Enable reliable sales and revenue analysis over time
-Analyze customer behavior and customer value
-Evaluate product and category-level performance
-Support regional and location-based insights
-Provide a scalable foundation for BI reporting and analytics
+## 🎯 Business Goals & Analytics Objectives
+- Build a centralized, analytics-ready data warehouse to support business decision-making  
+- Enable reliable sales and revenue analysis over time  
+- Analyze customer behavior and customer value  
+- Evaluate product and category-level performance  
+- Support regional and location-based insights  
+- Provide a scalable foundation for BI reporting and analytics  
 
-🗂️ Data Sources
+---
 
-CRM System: Customer, product, and sales transaction data
-ERP System: Customer master data, location information, and product classification data
-These systems are integrated to create a unified source of truth for analytics.
+## 🗂️ Data Sources
+This project integrates data from multiple operational systems:
 
-🏗️ Data Architecture
+- **CRM System**
+  - Customer information
+  - Product details
+  - Sales transaction data
 
-The project follows a layered data warehouse architecture to separate raw ingestion, data transformation, and analytics consumption.
-Bronze Layer: Raw data ingestion and traceability
-Silver Layer: Data cleaning, standardization, and enrichment
-Gold Layer: Analytics-ready fact and dimension tables optimized for querying
-This design ensures data quality, scalability, and efficient analytics.
+- **ERP System**
+  - Customer master data
+  - Location and regional information
+  - Product categorization and reference data
 
-🧱 Data Modeling
+These sources are combined to create a **single source of truth** for analytics.
 
-Dimensional modeling using a star schema
-Fact tables represent sales transactions
-Dimension tables represent customers, products, and locations
-Designed to support fast aggregations and business analysis
+---
 
-📊 Analytics Use Cases
+## 🏗️ Data Architecture
+The project follows a **layered data warehouse architecture** designed to separate raw data ingestion, data transformation, and analytics consumption.
 
-Sales trend analysis (monthly, quarterly, yearly)
-Top customers by revenue contribution
-Repeat vs one-time customer analysis
-Product and category performance analysis
-Regional sales performance analysis
+### Architecture Layers
+- **Bronze Layer**
+  - Raw data ingestion from source systems
+  - Data stored as-is for traceability and auditing
 
-🧮 Key SQL Queries
+- **Silver Layer**
+  - Data cleaning, standardization, and enrichment
+  - Resolves data quality issues and prepares data for modeling
 
-Revenue and growth trends
-Customer contribution analysis
-Product-level aggregations
-Region-wise performance metrics
+- **Gold Layer**
+  - Analytics-ready data modeled for reporting
+  - Optimized for business queries and aggregations
 
-🔍 Insights & Findings
+This design ensures **data quality, scalability, and efficient analytics**.
 
-Identification of high-value customers and products
-Revenue concentration patterns across customers
-Regional growth opportunities
+> 📌 Architecture diagrams are available in the `docs/` folder.
 
-📈 Dashboard
+---
 
-Analytics-ready data is designed to be consumed by BI tools such as Power BI or Excel.
-Dashboards focus on sales trends, customer insights, and product performance.
+## 🧱 Project Initialization
+The project initialization phase establishes a clean and maintainable foundation before implementation.
 
-📚 Learnings & Improvements
+### Naming Conventions
+- Consistent naming across databases, schemas, tables, and columns  
+- Clear separation between Bronze, Silver, and Gold layers  
+- Descriptive names to improve readability and reduce ambiguity  
 
-Improved understanding of data warehouse architecture and analytics modeling
-Practical experience designing SQL analytics pipelines
-Opportunities for future enhancements include incremental loads, historical tracking, and advanced customer analytics
+### Repository Structure
+- Logical separation of datasets, scripts, analytics queries, and documentation  
+- Designed to support version control and incremental development  
 
-📂 Repository Structure
+### Database & Schema Design
+- Dedicated database for the data warehouse  
+- Separate schemas for Bronze, Silver, and Gold layers  
+- Logical isolation between raw, transformed, and analytics-ready data  
+
+---
+
+## 🧩 Data Modeling
+- Dimensional modeling using a **star schema**
+- **Fact tables** represent sales transactions  
+- **Dimension tables** represent customers, products, and locations  
+- Optimized for analytical queries and aggregations  
+
+---
+
+## 📊 Analytics Use Cases
+- Sales trend analysis (monthly, quarterly, yearly)  
+- Top customers by revenue contribution  
+- Repeat vs one-time customer analysis  
+- Product and category performance analysis  
+- Regional sales performance analysis  
+
+---
+
+## 🧮 Key SQL Queries
+- Revenue and growth trend analysis  
+- Customer contribution and segmentation queries  
+- Product-level and category-level aggregations  
+- Region-wise sales performance metrics  
+
+All analytical queries are documented and stored in the repository.
+
+---
+
+## 🔍 Insights & Findings
+- Identification of high-value customers and products  
+- Revenue concentration patterns across customers  
+- Regional growth opportunities and performance differences  
+
+---
+
+## 📈 Dashboard
+- The Gold layer is designed to be consumed by BI tools such as **Power BI** or **Excel**
+- Dashboards focus on:
+  - Sales trends
+  - Customer insights
+  - Product and regional performance  
+
+---
+
+## 📚 Learnings & Improvements
+- Practical understanding of data warehouse architecture  
+- Hands-on experience with SQL-based analytics modeling  
+- Improved ability to translate business questions into analytical solutions  
+
+**Future Improvements**
+- Incremental data loading  
+- Historical data tracking  
+- Advanced customer analytics (CLV, cohorts)
+
+---
+
+## 📂 Repository Structure
 sales-customer-analytics-dwh/
 │
-├── datasets/
-├── docs/
-├── scripts/
-│   ├── bronze/
-│   ├── silver/
-│   ├── gold/
-├── analytics_queries/
+├── datasets/ # Raw CRM and ERP datasets
+├── docs/ # Architecture diagrams and documentation
+├── scripts/ # SQL scripts
+│ ├── bronze/
+│ ├── silver/
+│ ├── gold/
+├── analytics_queries/ # Business-focused SQL analysis queries
 └── README.md
+
