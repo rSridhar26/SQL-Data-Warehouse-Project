@@ -143,3 +143,15 @@ sales-customer-analytics-dwh/
 │ ├── gold/
 ├── analytics_queries/ # Business-focused SQL analysis queries
 └── README.md
+
+sales-customer-analytics-dwh/
+│
+├── datasets/
+├── docs/
+├── scripts/
+│   ├── bronze/
+│   ├── silver/
+│   ├── gold/
+├── analytics_queries/
+└── README.md
+
