@@ -135,23 +135,11 @@ All analytical queries are documented and stored in the repository.
 ## 📂 Repository Structure
 sales-customer-analytics-dwh/
 │
-├── datasets/ # Raw CRM and ERP datasets
-├── docs/ # Architecture diagrams and documentation
-├── scripts/ # SQL scripts
+├── datasets/ Raw CRM and ERP datasets
+├── docs/  Architecture diagrams and documentation
+├── scripts/  SQL scripts
 │ ├── bronze/
 │ ├── silver/
 │ ├── gold/
-├── analytics_queries/ # Business-focused SQL analysis queries
+├── analytics_queries/  Business-focused SQL analysis queries
 └── README.md
-
-sales-customer-analytics-dwh/
-│
-├── datasets/
-├── docs/
-├── scripts/
-│   ├── bronze/
-│   ├── silver/
-│   ├── gold/
-├── analytics_queries/
-└── README.md
-
