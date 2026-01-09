@@ -1,3 +1,30 @@
+/*
+=============================================================
+Bronze Layer – Table Definitions
+=============================================================
+Script Purpose:
+    This script creates the Bronze layer tables for the data
+    warehouse. These tables represent raw ingested data from
+    CRM and ERP source systems.
+
+    The Bronze layer is designed to store source data with
+    minimal assumptions and without applying business rules
+    or transformations. It serves as the foundational layer
+    for downstream data cleaning and standardization in the
+    Silver layer.
+
+Design Principles:
+    - Tables closely mirror source system structures
+    - No transformations or business logic applied
+    - Focus on reliable ingestion and traceability
+
+WARNING:
+    Dropping and recreating tables will permanently remove
+    existing data in the Bronze layer. Execute with caution.
+=============================================================
+*/
+
+
 DROP TABLE IF EXISTS bronze_db.crm_cust_info ;
 CREATE TABLE bronze_db.crm_cust_info (
 cst_id INT,
