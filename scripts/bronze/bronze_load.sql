@@ -1,3 +1,29 @@
+/*
+=============================================================
+Bronze Layer – Data Load Scripts
+=============================================================
+Script Purpose:
+    This script loads raw data from CRM and ERP CSV files
+    into the corresponding Bronze layer tables using MySQL
+    load mechanisms.
+
+    Data is ingested as-is, without cleansing, validation,
+    or transformation, to preserve the original source data
+    for traceability and downstream processing.
+
+Data Flow:
+    Source Systems (CRM, ERP)
+        → CSV Files
+            → Bronze Tables
+
+NOTE:
+    This script assumes source CSV files are available in the
+    MySQL secure file directory and that column order matches
+    the table definitions.
+
+=============================================================
+*/
+
 -- Customer Master Table 
 TRUNCATE TABLE bronze_db.crm_cust_info;
 
