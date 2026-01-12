@@ -1,3 +1,31 @@
+/*
+=============================================================
+Silver Layer Transformations and Loading
+=============================================================
+Purpose:
+    This script applies data cleaning, standardization,
+    validation, and deduplication logic to Bronze layer data
+    and loads the results into Silver layer tables.
+
+    The Silver layer serves as a controlled transformation
+    zone where raw source data is converted into clean,
+    consistent, and reliable datasets by:
+    - Trimming and standardizing text fields
+    - Correcting data types and date formats
+    - Handling null, invalid, and inconsistent values
+    - Deduplicating records and selecting the latest state
+    - Applying conservative business rules
+
+    Each Silver table is loaded independently to ensure
+    data correctness before downstream analytics.
+
+Note:
+    No aggregations or analytical metrics are created in
+    this layer. The Silver layer prepares trusted data for
+    dimensional modeling and business analysis in the Gold
+    layer.
+=============================================================
+*/
 
 
 -- INSERTING silver_db.crm_cust_info
